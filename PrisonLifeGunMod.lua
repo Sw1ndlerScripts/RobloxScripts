@@ -1,3 +1,5 @@
+-- Kinda sucks but will give you all the guns and then mod them
+
 function gunMod(gun)
 	gun.MaxAmmo = 1000000000000
 	gun.CurrentAmmo = 1000000000000
