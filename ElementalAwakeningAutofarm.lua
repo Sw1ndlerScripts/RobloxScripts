@@ -1,6 +1,13 @@
 _G.farmSpells = false
-_G.levelLimit = 5
 _G.spellFound = false
+
+-- Dont mess with these ^^^
+
+_G.levelLimit = 5 -- Will level to this number and then re roll
+local WantedRarities = {"Heavenly","Legendary","Exotic"} -- Pick the rarities you want here
+
+
+
 local ScreenGui
 
 localPlayer = tostring(game:GetService("Players").LocalPlayer)
@@ -93,7 +100,7 @@ function spinElement()
 		Magic, Rarity = game:GetService("ReplicatedStorage").Events.Spin:InvokeServer(false)
 		if Magic ~= nil then
 			print("Rolled "..Magic.." with a rarity of "..Rarity)
-			local WantedRarities = {"Heavenly","Legendary","Exotic"}
+			
 			if table.find(WantedRarities,Rarity) then
 				_G.spellFound = true
 				break
