@@ -146,26 +146,26 @@ Misc:AddSlider({
 	end    
 })
 
-UserInputService.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Q then
-		if _G.lockPositionToggle == true then
-			_G.lockPositionToggle = false
-			print("setFalse")
-			wait(0.4)
+-- UserInputService.InputBegan:Connect(function(input)
+-- 	if input.KeyCode == Enum.KeyCode.Q then
+-- 		if _G.lockPositionToggle == true then
+-- 			_G.lockPositionToggle = false
+-- 			print("setFalse")
+-- 			wait(0.4)
 		
 
-		elseif _G.lockPositionToggle == false then
-			_G.lockPositionToggle = true
-			print("setTrue")
-			lockPosition()
-			wait(0.4)	
-		end
-	end
-	if input.KeyCode == Enum.KeyCode.F then
-		teleportTo(game:GetService("Workspace").Main.Tree.Part.CFrame)
-	end
+-- 		elseif _G.lockPositionToggle == false then
+-- 			_G.lockPositionToggle = true
+-- 			print("setTrue")
+-- 			lockPosition()
+-- 			wait(0.4)	
+-- 		end
+-- 	end
+-- 	if input.KeyCode == Enum.KeyCode.F then
+-- 		teleportTo(game:GetService("Workspace").Main.Tree.Part.CFrame)
+-- 	end
 	
-end)
+-- end)
 
 OrionLib:Init()
 
