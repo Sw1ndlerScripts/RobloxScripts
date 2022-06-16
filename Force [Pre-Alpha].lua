@@ -69,8 +69,8 @@ function autoCollect()
         while _G.autoCollect do
             noClip()
 
-			if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.y < 800 then
-				tweenTo(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0))
+			if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.y < 500 then
+				teleportTo(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0))
 			end
             wait(0)
         end
@@ -105,7 +105,7 @@ function autoCollect()
 					wait(0.15)
 					virtualUser:SetKeyUp('0x65')
 					wait(0.3)
-					--trinket:Destroy()
+					trinket:Destroy()
 				else 
 					trinket:Destroy()
 				end
