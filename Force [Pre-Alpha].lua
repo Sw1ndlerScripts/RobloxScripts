@@ -105,7 +105,7 @@ function autoCollect()
 					wait(0.15)
 					virtualUser:SetKeyUp('0x65')
 					wait(0.3)
-					trinket:Destroy()
+					--trinket:Destroy()
 				else 
 					trinket:Destroy()
 				end
@@ -180,6 +180,17 @@ AutoFarm:AddToggle({
 
         autoCollect()
 	end
+})
+
+
+
+AutoFarm:AddDropdown({
+	Name = "FlowerTeleports",
+	Default = "1",
+	Options = {"Carami Flower", "Hora Flower", "Lon Flower"},
+	Callback = function(Value)
+		tweenTo(game:GetService("Workspace").Ingredients:FindFirstChild(Value).CFrame)
+	end    
 })
 
 
