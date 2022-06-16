@@ -68,6 +68,10 @@ function autoCollect()
     spawn(function()
         while _G.autoCollect do
             noClip()
+
+			if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.y < 800 then
+				tweenTo(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0))
+			end
             wait(0)
         end
     end)
@@ -93,7 +97,7 @@ function autoCollect()
 
 				print(trinket.Position.X)
 				tweenTo(trinket.CFrame)
-				wait(1.75)
+				wait(2.5)
 
 				if objectsTouching() > 0 then
 
@@ -147,7 +151,7 @@ local Misc = main:MakeTab({
 })
 
 AutoFarm:AddToggle({
-	Name = "AutoCollect",
+	Name = "AutoCollect (Run disable fall damage first)",
 	Default = false,
 
 	Callback = function(Value)
