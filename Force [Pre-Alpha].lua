@@ -185,7 +185,7 @@ AutoFarm:AddToggle({
 
 
 AutoFarm:AddDropdown({
-	Name = "FlowerTeleports",
+	Name = "FlowerTeleports [Small Ban Chance]",
 	Default = "1",
 	Options = {"Carami Flower", "Hora Flower", "Lon Flower"},
 	Callback = function(Value)
