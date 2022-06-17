@@ -172,7 +172,7 @@ local Misc = main:MakeTab({
 })
 
 AutoFarm:AddToggle({
-	Name = "AutoCollect [Small ban chance] [Run disable fall damage first]",
+	Name = "AutoCollect [Run disable fall damage first]",
 	Default = false,
 
 	Callback = function(Value)
