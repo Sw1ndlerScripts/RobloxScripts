@@ -93,7 +93,7 @@ function autoCollect()
 				distanceToTrinket = (centerOfMap - trinket.position).magnitude
 
 
-				-- if distanceToTrinket < 500 and trinket.position.Y > 1000 then
+				--if distanceToTrinket < 500 and trinket.position.Y > 1000 then
 
 				print(trinket.Position.X)
 				tweenTo(trinket.CFrame)
@@ -105,11 +105,11 @@ function autoCollect()
 					wait(0.15)
 					virtualUser:SetKeyUp('0x65')
 					wait(0.3)
-					--trinket:Destroy()
+					trinket:Destroy()
 				else 
 					trinket:Destroy()
 				end
-				-- end 
+				
 			end    
 		end
 		wait(0)
@@ -236,5 +236,4 @@ Misc:AddButton({
 
 
 OrionLib:Init()
-
 
