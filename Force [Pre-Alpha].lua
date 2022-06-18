@@ -138,6 +138,8 @@ function serverHop()
 end
 
 function collectCrystal()
+	tweenTo(CFrame.new(-196.83335876464844, 1650.444580078125, -7149.2607421875))
+	wait(1.2)
 	for _,crystal in pairs(game:GetService("Workspace"):GetChildren()) do
 		if crystal:FindFirstChild("Rarity") and crystal:FindFirstChild("Attachment") then
 			tweenTo(crystal.CFrame)
