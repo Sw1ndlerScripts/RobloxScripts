@@ -10,7 +10,7 @@ _G.autoFarm = false
 function autoFarm()
 	while _G.autoFarm do
 		fireclickdetector(game:GetService("Workspace").DeliverySys.Misc["Package Pile"].ClickDetector)
-		task.wait(4.5)
+		task.wait(2.2)
 		for _,point in pairs(game:GetService("Workspace").DeliverySys.DeliveryPoints:GetChildren()) do
 			if point.Locate.Locate.Enabled then
 				teleportTo(point.CFrame)
