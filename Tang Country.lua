@@ -14,7 +14,6 @@ function autoFarm()
 		for _,point in pairs(game:GetService("Workspace").DeliverySys.DeliveryPoints:GetChildren()) do
 			if point.Locate.Locate.Enabled then
 				teleportTo(point.CFrame)
-				task.wait(1.5)
 			end
 		end
 		task.wait(0)
