@@ -9,14 +9,21 @@ _G.autoFarm = false
 
 function autoFarm()
 	while _G.autoFarm do
+	    
+	    local foundPoint = false
 		fireclickdetector(game:GetService("Workspace").DeliverySys.Misc["Package Pile"].ClickDetector)
-		task.wait(2.2)
-		for _,point in pairs(game:GetService("Workspace").DeliverySys.DeliveryPoints:GetChildren()) do
-			if point.Locate.Locate.Enabled then
-				teleportTo(point.CFrame)
-			end
-		end
-		task.wait(0)
+		
+		while foundPoint == false do
+    		for _,point in pairs(game:GetService("Workspace").DeliverySys.DeliveryPoints:GetChildren()) do
+    			if point.Locate.Locate.Enabled then
+    				teleportTo(point.CFrame)
+    				--firetouchinterest(point, game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, 0)
+    				foundPoint = true
+    			end
+    		end
+    		wait(0)
+    	end
+		wait(0)
 	end
 end
 
@@ -42,6 +49,5 @@ section1:addToggle("Auto Farm", nil, function(value)
 		autoFarm()
 	end
 end)
-
 
 
