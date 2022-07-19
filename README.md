@@ -1,1 +1,1 @@
-Collection of all the roblox scripts I have made
+A collection of all the scripts I have developed (for educational purposes of course)
